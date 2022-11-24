@@ -1,4 +1,4 @@
-//Find the common free slot for the employees
+# //Find the common free slot for the employees
 
 def parseSlot(list_of_slots):
     # print("list_of_slots",list_of_slots)
@@ -14,7 +14,7 @@ def parseSlot(list_of_slots):
         # print("result",result)
     return result
     
-e_1 = ["1-3"] // can have more slots in this way for e_1 = ["1-3", "5-6"]
+e_1 = ["1-3"] # // can have more slots in this way for e_1 = ["1-3", "5-6"]
 e_2 = ["2-4"]
 e_3 = ["6-8"]
 e_4 = ["9-12"]
@@ -22,7 +22,7 @@ allemp = [e_1, e_2, e_3, e_4]
 print("allemp",allemp)
 
 allTimeSlots = []
-for j in range(1,12): //can change 0,24 for 24 hours, I mean more slots
+for j in range(1,12): # //can change 0,24 for 24 hours, I mean more slots
     allTimeSlots.append(str(j) + "-" + str(j+1))
 print("allTimeSlots",allTimeSlots)
 
@@ -42,7 +42,7 @@ for j in range(0,len(allTimeSlots)):
 print("commonFreeSlots",commonFreeSlots)
 
 
-// output
-// allemp [['1-3'], ['2-4'], ['6-8'], ['9-12']]
-// allTimeSlots ['1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9', '9-10', '10-11', '11-12']
-// commonFreeSlots ['4-5', '5-6', '8-9']
+# // output
+# // allemp [['1-3'], ['2-4'], ['6-8'], ['9-12']]
+# // allTimeSlots ['1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9', '9-10', '10-11', '11-12']
+# // commonFreeSlots ['4-5', '5-6', '8-9']
