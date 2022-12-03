@@ -1,4 +1,23 @@
-# rotate90degreePrint
+# supports MxN matrix
+# mtrx = [['O','.','.','.'],['O','O','.','.'],['O','O','O','O'],['O','O','O','O']]
+# 'O' stands for ball, '.' stands for empty
+# time complexity O(mn)
+# space complexity O(mn)
+def rotate90degreeBallDrop_MxN(mtrx):
+    m = len(mtrx)
+    n = len(mtrx[0])
+    res = [['.'] * m for i in range(n)]
+    for i in range(m):
+    	empt = n-1
+    	for j in range(n-1,-1,-1):
+    		if mtrx[i][j] == "O":
+    			res[empt][m-1-i] = "O"
+    			empt -=1
+    			mtrx[i][j] = "."
+    printMatrix(res)
+
+
+# rotate90degreePrint a square matrix
 def rotate90degreePrint(M):
     N=len(M)
     for j in range(N) :
@@ -47,7 +66,7 @@ print("********************\n")
 rotate90degreeBallDropDown(M)
 
 # *************************
-# Output of above script 
+# Output of above script  rotate90degreeBallDropDown(M)
 # *************************\
 
 # *********INPUT Matrix***********
@@ -60,4 +79,27 @@ rotate90degreeBallDropDown(M)
 # 9 5 0 0 
 # 10 6 2 0 
 # 11 7 3 1 
+
+
+# Note : MxN matrix -----  rotate90degreeBallDrop_MxN
+Mtrx = [['O','.','.','.'],['O','O','.','.'],['O','O','O','O'],['O','O','O','O']]
+printMatrix(Mtrx)
+print("\n********************")
+print("********************\n")
+rotate90degreeBallDrop_MxN(Mtrx)
+
+# *************************
+# Output of above script  rotate90degreeBallDrop_MxN(Mtrx)
+# *************************\
+
+# *********INPUT MMatrix***********
+# O . . . 
+# O O . . 
+# O O O O 
+# O O O O 
+# *********OUTPUT Matrix***********
+# O O . . 
+# O O . . 
+# O O O . 
+# O O O O 
 
